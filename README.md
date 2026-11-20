@@ -61,3 +61,16 @@ Each gold table is built from the cleaned silver tables and exported as a CSV fi
 
 - **Late return share** = late returns ÷ returned loans
 - **Not returned share** = loans not returned ÷ all loans
+
+
+
+## Gold tables
+
+| Table | Rows | Columns | Column names | Answers |
+|---|---|---|---|---|
+| gold.loans_by_branch | 8 | 9 | branch_id, branch_name, area, loans, returned, late_returns, late_return_share, not_returned, not_returned_share | Q1, Q3, Q4 |
+| gold.loans_by_month | 12 | 3 | month, month_name, loans | Q2 |
+| gold.loans_by_item_type | 3 | 7 | item_type, loans, returned, late_returns, late_return_share, not_returned, not_returned_share | Q3, Q4 |
+
+- All three gold tables add up to the same total of 5,898 loans, matching `silver.loans`.
+
